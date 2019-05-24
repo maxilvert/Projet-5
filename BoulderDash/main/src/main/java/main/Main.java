@@ -1,7 +1,4 @@
-/**
- * @author Jean-Aymeric jadiet@cesi.fr
- * @version 1.0
- */
+
 package main;
 
 import contract.ControllerOrder;
