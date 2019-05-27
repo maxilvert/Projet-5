@@ -48,7 +48,7 @@ public final class View implements IView, Runnable {
 			case KeyEvent.VK_KP_DOWN:
 				return ControllerOrder.DOWN;
 			default:
-				return ControllerOrder.DEFAULT;
+				return ControllerOrder.UP;
 		}
 	}
 
