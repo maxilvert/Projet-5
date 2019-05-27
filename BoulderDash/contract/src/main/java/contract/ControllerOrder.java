@@ -14,5 +14,6 @@ public enum ControllerOrder {
 	/** The Deutch. */
 	RIGHT,
 	/** The Indonesia. */
-	LEFT
+	LEFT,
+	DEFAULT
 }
