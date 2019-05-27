@@ -46,7 +46,7 @@ class DAOMap extends DAOEntity<Map> {
 		Map Map = new Map();
 
 		try {
-			final String sql = "{call MapById(?)}";
+			final String sql = "{call HelloWorldById(?)}";
 			final CallableStatement call = this.getConnection().prepareCall(sql);
 			call.setInt(1, id);
 			call.execute();
@@ -71,7 +71,7 @@ class DAOMap extends DAOEntity<Map> {
 		Map Map = new Map();
 
 		try {
-			final String sql = "{call MapByCode(?)}";
+			final String sql = "{call HelloWorldByCode(?)}";
 			final CallableStatement call = this.getConnection().prepareCall(sql);
 			call.setString(1, code);
 			call.execute();
