@@ -64,6 +64,7 @@ public final class Model extends Observable implements IModel {
 		try {
 			final DAOHelloWorld daoHelloWorld = new DAOHelloWorld(DBConnection.getInstance().getConnection());
 			this.setHelloWorld(daoHelloWorld.find(code));
+			
 		} catch (final SQLException e) {
 			e.printStackTrace();
 		}
@@ -83,3 +84,4 @@ public final class Model extends Observable implements IModel {
 		return this;
 	}
 }
+
