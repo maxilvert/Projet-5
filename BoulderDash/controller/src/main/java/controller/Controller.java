@@ -18,7 +18,7 @@ public final class Controller implements IController {
 
 	public void instruction() {
 		this.view.printMessage(
-				"Appuyer sur les touches 'E', 'F', 'D' ou 'I', pour afficher Hello world dans la langue d votre choix.");
+				"Voici les regles du jeu: bla bla \r\n	Appuie sur ok pour commencer.");
 	}
 
 	private void setView(final IView pview) {
@@ -30,22 +30,10 @@ public final class Controller implements IController {
 	}
 
 	public void orderPerform(final ControllerOrder controllerOrder) {
-		switch (controllerOrder) {
-		case UP:
-			this.model.loadMap("GB");
-			break;
-		case RIGHT:
 			this.model.loadMap("FR");
-			break;
-		case LEFT:
-			this.model.loadMap("DE");
-			break;
-		case DOWN:
-			this.model.loadMap("ID");
-			break;
-		default:
-			break;
-		}
+			instruction();
+			
+		
 	}
 
 	@Override
@@ -53,5 +41,6 @@ public final class Controller implements IController {
 		// TODO Auto-generated method stub
 		
 	}
-
+	
+	
 }
