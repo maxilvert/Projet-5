@@ -1,28 +1,30 @@
 package model;
 
-import java.awt.Image;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-import model.GameBoard;
-
 public class LevelParser {
 	
-	int largeur = 25;
-	int longueur = 25;
-	private GameBoard[][] tabImg = new GameBoard[longueur][largeur];
-	Wall wall = new Wall();
-	Dirt ground = new Dirt();
-	
-	public void readFile() throws FileNotFoundException {
+	public Level readFile(){
+		
 		String FileName = "src/Image/text.txt";
-
+		int largeur = 25;
+		int longueur = 25;
+		
+		Level level = new Level(largeur, longueur);
+		
+		
 		File text = new File(FileName);
 		int k = 0;
-		Scanner scnr = new Scanner(text);
-		String lineStr = scnr.nextLine();
-		scnr.close();
+		String lineStr = "";
+		try {
+			Scanner scnr = new Scanner(text);
+			lineStr = scnr.nextLine();
+			scnr.close();
+		} catch (FileNotFoundException e) {
+//			 Je suis sur de moi !!!
+		}
 
 		for (int i = 0; i < longueur; i++) {
 			for (int j = 0; j < largeur; j++) {
@@ -34,20 +36,30 @@ public class LevelParser {
 				switch (elem) {
 
 				case 'a': {
-					tabImg[i][j] = new GameBoard(wall.getSprite(), j*32, i*32);
+					level.getCases()[i][j] = new Wall();
 //							tabImg[i][j].setImage(wall);
 					break;
 				}
 				case 'b': {
-					tabImg[i][j] = new GameBoard(ground.getSprite(), j*32, i*32);
+					level.getCases()[i][j] = new Dirt();
+//					tabImg[i][j].setImage(ground);
+					break;
+				}
+				
+				case 'r': {
+					level.getCases()[i][j] = new Rockford();
 //					tabImg[i][j].setImage(ground);
 					break;
 				}
 
 				}
 				k += 1;
+				level.getCases()[i][j].setX(j*32);
+				level.getCases()[i][j].setY(i*32);
 			}
+			
 		}
+		return level;
 	}
 
 }

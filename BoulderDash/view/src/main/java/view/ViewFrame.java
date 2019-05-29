@@ -4,46 +4,47 @@ import java.awt.GraphicsConfiguration;
 import java.awt.HeadlessException;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.io.FileNotFoundException;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 import contract.IController;
-import contract.IModel;
+import contract.ILevel;
 
 
-class ViewFrame extends JFrame implements KeyListener {
+class ViewFrame extends JFrame {
 
 	
-	private IModel model;
+	private ILevel model;
 
 	
 	private IController controller;
 	
 	private static final long	serialVersionUID	= -697358409737458175L;
 
-	
-	public ViewFrame(final IModel model) throws HeadlessException {
-		this.buildViewFrame(model);
-	}
-
-	
-	public ViewFrame(final IModel model, final GraphicsConfiguration gc) {
-		super(gc);
-		this.buildViewFrame(model);
-	}
-
-	
-	public ViewFrame(final IModel model, final String title) throws HeadlessException {
-		super(title);
-		this.buildViewFrame(model);
-	}
-
-	
-	public ViewFrame(final IModel model, final String title, final GraphicsConfiguration gc) {
-		super(title, gc);
-		this.buildViewFrame(model);
-	}
+//	
+//	public ViewFrame(final ILevel model) throws HeadlessException, FileNotFoundException {
+//		this.buildViewFrame(model);
+//	}
+//
+//	
+//	public ViewFrame(final ILevel model, final GraphicsConfiguration gc) throws FileNotFoundException {
+//		super(gc);
+//		this.buildViewFrame(model);
+//	}
+//
+//	
+//	public ViewFrame(final ILevel model, final String title) throws HeadlessException, FileNotFoundException {
+//		super(title);
+//		this.buildViewFrame(model);
+//	}
+//
+//	
+//	public ViewFrame(final ILevel model, final String title, final GraphicsConfiguration gc) throws FileNotFoundException {
+//		super(title, gc);
+//		this.buildViewFrame(model);
+//	}
 
 	
 	private IController getController() {
@@ -56,21 +57,24 @@ class ViewFrame extends JFrame implements KeyListener {
 	}
 
 	
-	protected IModel getModel() {
+	protected ILevel getModel() {
 		return this.model;
 	}
 
-	private void setModel(final IModel model) {
+	private void setModel(final ILevel model) {
 		this.model = model;
 	}
-
 	
-	private void buildViewFrame(final IModel model) {
+	
+
+	ViewPanel pan = new ViewPanel();
+	
+	private void buildViewFrame() throws FileNotFoundException {
 		this.setModel(model);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(false);
-		this.addKeyListener(this);
-		this.setContentPane(new ViewPanel(this));
+		this.add(pan);
+		this.addKeyListener(pan);
 		this.setSize(1000, 1000);
 		this.setLocationRelativeTo(null);
 	}
@@ -79,19 +83,7 @@ class ViewFrame extends JFrame implements KeyListener {
 	public void printMessage(final String message) {
 		JOptionPane.showMessageDialog(null, message);
 	}
-
-	
-	public void keyTyped(final KeyEvent e) {
-
-	}
-
-	
-	public void keyPressed(final KeyEvent e) {
-		this.getController().orderPerform(View.keyCodeToControllerOrder(e.getKeyCode()));
-	}
-
-	
-	public void keyReleased(final KeyEvent e) {
-
-	}
 }
+
+	
+	

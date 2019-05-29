@@ -13,9 +13,14 @@ public class Rockford extends Motion {
 	private Image Up;
 	private Image Down;
 	private Look look = Look.DEFAULT;
-	public Rockford(String type) throws IOException {
+	public Rockford() {
 		super("RockFordLeft");
-		left = ImageIO.read(new File("src/Image/RockFordLeft.png"));
+		try {
+			left = ImageIO.read(new File("src/Image/RockFordLeft.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	@Override
@@ -29,4 +34,29 @@ public class Rockford extends Motion {
 		}
 		throw new RuntimeException("pas normal!!!!");
 	}
+	
+	public void moveUp() {
+
+		y = y - 32;
+		look = Look.UP;
+
+	}
+
+//	public void moveRight() {
+//		Rockford = RockFordRight;
+//		this.xRockford = this.xRockford + 32;
+//
+//	}
+//
+//	public void moveLeft() {
+//		Rockford = RockFordLeft;
+//		this.xRockford = this.xRockford - 32;
+//
+//	}
+//
+//	public void moveDown() {
+//		Rockford = RockFordDown;
+//		this.yRockford = this.yRockford + 32;
+//
+//	}
 }
