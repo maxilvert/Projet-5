@@ -1,6 +1,6 @@
 package entity;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class Map extends Entity {
 
