@@ -8,7 +8,7 @@ public class LevelParser {
 
 	public Level readFile(){
 
-		String FileName = "src/Image/text.txt";
+		String FileName = "C:\\Users\\Théo\\Documents\\GitHub\\Projet-5\\BoulderDash\\model\\src\\main\\resources\\Image\\level.txt";
 		int largeur = 25;
 		int longueur = 25;
 
@@ -23,13 +23,18 @@ public class LevelParser {
 			lineStr = scnr.nextLine();
 			scnr.close();
 		} catch (FileNotFoundException e) {
-//			 Je suis sur de moi !!!
+			 System.out.println("FICHIER INTROUVABLE");
 		}
+		
+//		Scanner scnr = new Scanner(text);
+//		lineStr = scnr.nextLine();
+//		scnr.close();
 
 		for (int i = 0; i < longueur; i++) {
 			for (int j = 0; j < largeur; j++) {
-
+//System.out.println(lineStr);
 				char elem = lineStr.charAt(k);
+				System.out.println(elem);
 //				tabImg[i][j].setX(j * 32);
 //				tabImg[i][j].setY(i * 32);
 				System.out.println(i + "," + j);

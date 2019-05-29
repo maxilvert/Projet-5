@@ -1,43 +1,43 @@
 package model;
 
-import java.sql.SQLException;
+//import java.sql.SQLException;
 import java.util.Observable;
 
 import contract.ILevel;
-import entity.Map;
+//import entity.Map;
 
 
 public final class Model extends Observable implements ILevel {
 
 	
-	private Map map;
+//	private Map map;
 
 	
-	public Model() {
-		this.map = new Map();
-	}
-
-	
-	public Map getMap() {
-		return this.map;
-	}
-
-	
-	private void setMap(final Map map) {
-		this.map = map;
-		this.setChanged();
-		this.notifyObservers();
-	}
-
-	
-	public void loadMap(final String code) {
-		try {
-			final DAOMap daoMap = new DAOMap(DBConnection.getInstance().getConnection());
-			this.setMap(daoMap.find(code));
-		} catch (final SQLException e) {
-			e.printStackTrace();
-		}
-	}
+//	public Model() {
+//		this.map = new Map();
+//	}
+//
+//	
+//	public Map getMap() {
+//		return this.map;
+//	}
+//
+//	
+//	private void setMap(final Map map) {
+//		this.map = map;
+//		this.setChanged();
+//		this.notifyObservers();
+//	}
+//
+//	
+//	public void loadMap(final String code) {
+//		try {
+//			final DAOMap daoMap = new DAOMap(DBConnection.getInstance().getConnection());
+//			this.setMap(daoMap.find(code));
+//		} catch (final SQLException e) {
+//			e.printStackTrace();
+//		}
+//	}
 
 	
 	public Observable getObservable() {

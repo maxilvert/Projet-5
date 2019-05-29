@@ -1,10 +1,10 @@
 package controller;
 
-import contract.ControllerOrder;
+//import contract.ControllerOrder;
 import contract.IController;
 import contract.ILevel;
 
-import contract.ILevel;
+//import contract.ILevel;
 import contract.IView;
 
 public final class Controller implements IController {
@@ -30,11 +30,11 @@ public final class Controller implements IController {
 		this.model = model;
 	}
 
-	public void orderPerform(final ControllerOrder controllerOrder) {
-		this.model.loadMap("M1");
-		// instruction();
+//	public void orderPerform(final ControllerOrder controllerOrder) {
+//		this.model.loadMap("M1");
+//		// instruction();
 
-	}
+//	}
 
 	@Override
 	public void control() {

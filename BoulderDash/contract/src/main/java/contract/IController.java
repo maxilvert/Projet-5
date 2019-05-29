@@ -7,5 +7,5 @@ public interface IController {
 	public void control();
 
 	
-	public void orderPerform(ControllerOrder controllerOrder);
+//	public void orderPerform(ControllerOrder controllerOrder);
 }

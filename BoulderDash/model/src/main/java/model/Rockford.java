@@ -1,6 +1,5 @@
 package model;
 
-
 import java.awt.Image;
 import java.io.File;
 import java.io.IOException;
@@ -13,6 +12,7 @@ public class Rockford extends Motion {
 	private Image Up;
 	private Image Down;
 	private Look look = Look.DEFAULT;
+
 	public Rockford() {
 		super("RockFordLeft");
 		try {
@@ -42,21 +42,21 @@ public class Rockford extends Motion {
 
 	}
 
-//	public void moveRight() {
-//		Rockford = RockFordRight;
-//		this.xRockford = this.xRockford + 32;
-//
-//	}
-//
-//	public void moveLeft() {
-//		Rockford = RockFordLeft;
-//		this.xRockford = this.xRockford - 32;
-//
-//	}
-//
-//	public void moveDown() {
-//		Rockford = RockFordDown;
-//		this.yRockford = this.yRockford + 32;
-//
-//	}
+	public void moveRight() {
+		x = x + 32;
+		look = Look.RIGHT;
+
+	}
+
+	public void moveLeft() {
+		x = x - 32;
+		look = Look.LEFT;
+
+	}
+
+	public void moveDown() {
+		y = y + 32;
+		look = Look.DOWN;
+
+	}
 }
