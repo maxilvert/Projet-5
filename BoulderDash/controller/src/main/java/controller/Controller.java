@@ -3,6 +3,8 @@ package controller;
 import contract.ControllerOrder;
 import contract.IController;
 import contract.ILevel;
+
+import contract.ILevel;
 import contract.IView;
 
 public final class Controller implements IController {
@@ -17,8 +19,7 @@ public final class Controller implements IController {
 	}
 
 	public void instruction() {
-		this.view.printMessage(
-				"regles du jeu : bla bla \r\n Pour jouer appuie sur OK");
+		this.view.printMessage("regles du jeu : bla bla \r\n Pour jouer appuie sur OK");
 	}
 
 	private void setView(final IView pview) {
@@ -30,18 +31,15 @@ public final class Controller implements IController {
 	}
 
 	public void orderPerform(final ControllerOrder controllerOrder) {
-			this.model.loadMap("M1");
-		//	instruction();
-			
-			
-		}
-	
+		this.model.loadMap("M1");
+		// instruction();
+
+	}
 
 	@Override
 	public void control() {
 		// TODO Auto-generated method stub
-		
+
 	}
-	
-	
+
 }
