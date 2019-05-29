@@ -1,6 +1,10 @@
 package model;
 
 import java.awt.Image;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
 
 public class MotionLess implements IMotionLess {
 	static Image sprite;
@@ -9,7 +13,10 @@ public class MotionLess implements IMotionLess {
 	static int y;
 	static int height ;
 	static int width ;
-	
+	public MotionLess(String type) throws IOException {
+		// TODO Auto-generated constructor stub
+		sprite = ImageIO.read(new File("src/Image/"+type+".png"));
+	}
 	public static Image getSprite() {
 		return sprite;
 	}
