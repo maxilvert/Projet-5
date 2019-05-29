@@ -30,7 +30,7 @@ public final class Controller implements IController {
 	}
 
 	public void orderPerform(final ControllerOrder controllerOrder) {
-			this.model.loadMap("FR");
+			this.model.loadMap("M1");
 		//	instruction();
 			
 			
