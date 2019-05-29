@@ -3,11 +3,11 @@ package model;
 import java.sql.SQLException;
 import java.util.Observable;
 
-import contract.IModel;
+import contract.ILevel;
 import entity.Map;
 
 
-public final class Model extends Observable implements IModel {
+public final class Model extends Observable implements ILevel {
 
 	
 	private Map map;

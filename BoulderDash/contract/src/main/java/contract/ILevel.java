@@ -4,7 +4,7 @@ import java.util.Observable;
 import entity.Map;
 
 
-public interface IModel {
+public interface ILevel {
 
 	
 	
