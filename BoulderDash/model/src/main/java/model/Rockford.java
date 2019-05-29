@@ -8,6 +8,7 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 
 public class Rockford extends Motion {
+<<<<<<< HEAD
 	private Image left;
 	private Look look = Look.RIGHT;
 	public Rockford(String type) throws IOException {
@@ -26,4 +27,7 @@ public class Rockford extends Motion {
 		}
 		throw new RuntimeException("pas normal!!!!");
 	}
+=======
+	
+>>>>>>> affichagePerso
 }
