@@ -14,7 +14,7 @@ public class Rockford extends Motion {
 	private Look look = Look.DEFAULT;
 
 	public Rockford() {
-		super("RockFordLeft");
+		super("RockFord");
 		try {
 			left = ImageIO.read(new File("src/Image/RockFordLeft.png"));
 		} catch (IOException e) {

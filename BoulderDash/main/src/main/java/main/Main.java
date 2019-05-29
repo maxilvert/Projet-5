@@ -3,8 +3,6 @@ package main;
 
 import model.Level;
 import model.LevelParser;
-import model.Model;
-import view.ViewFrame;
 
 
 public abstract class Main {
@@ -20,6 +18,6 @@ public abstract class Main {
 //        controller.orderPerform(ControllerOrder.DEFAULT);
     	LevelParser levelParser = new LevelParser();
     	Level level = levelParser.readFile();
-    	ViewFrame view = new ViewFrame();
+//    	ViewFrame view = new ViewFrame();
     }
 }
