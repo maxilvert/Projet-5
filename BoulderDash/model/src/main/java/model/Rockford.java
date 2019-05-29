@@ -1,11 +1,14 @@
 package model;
 
 import java.awt.Image;
+import java.io.IOException;
 
 public class Rockford extends Motion {
 	
-	
-	
+	public Rockford(String type) throws IOException {
+		super(type);
+		// TODO Auto-generated constructor stub
+	}
 	public static void setX(int x) {
 		MotionLess.x = x;
 	}
