@@ -18,7 +18,7 @@ public final class Controller implements IController {
 
 	public void instruction() {
 		this.view.printMessage(
-				"Voici les regles du jeu: bla bla \r\n	Appuie sur ok pour commencer.");
+				"Appuyer sur les touches 'E', 'F', 'D' ou 'I', pour afficher Hello world dans la langue d votre choix.");
 	}
 
 	private void setView(final IView pview) {
@@ -30,11 +30,12 @@ public final class Controller implements IController {
 	}
 
 	public void orderPerform(final ControllerOrder controllerOrder) {
-			this.model.loadMap("FR");
-			instruction();
+			this.model.loadMap("GB");
+		//	instruction();
 			
-		
-	}
+			
+		}
+	
 
 	@Override
 	public void control() {
