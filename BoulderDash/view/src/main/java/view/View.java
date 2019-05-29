@@ -1,7 +1,6 @@
 package view;
 
 import java.awt.event.KeyEvent;
-
 import javax.swing.SwingUtilities;
 
 import contract.ControllerOrder;
@@ -51,3 +50,6 @@ public final class View implements IView, Runnable {
 		this.viewFrame.setController(controller);
 	}
 }
+
+
+
