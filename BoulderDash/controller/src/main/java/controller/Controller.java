@@ -18,7 +18,7 @@ public final class Controller implements IController {
 
 	public void instruction() {
 		this.view.printMessage(
-				"Appuyer sur les touches 'E', 'F', 'D' ou 'I', pour afficher Hello world dans la langue d votre choix.");
+				"regles du jeu : bla bla \r\n Pour jouer appuie sur OK");
 	}
 
 	private void setView(final IView pview) {

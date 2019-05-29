@@ -52,18 +52,18 @@ public class Map extends Entity {
 		this.message = message;
 	}
 
-	public void readMap() {
-		char[][] line = new char[19][4];
-		int x = 0;
-		for (int i = 0; i < 19; i++) {
-			for (int j = 0; j < 4; j++) {
-				Scanner scnr = new Scanner (message);
-				line[i][j]= scnr.nextLine().charAt(x);
-				scnr.close();
-				System.out.println(line[i][j]);
-			}
-		}
-		
-
-	}
+//	public void readMap() {
+//		char[][] line = new char[19][4];
+//		int x = 0;
+//		for (int i = 0; i < 19; i++) {
+//			for (int j = 0; j < 4; j++) {
+//				Scanner scnr = new Scanner (message);
+//				line[i][j]= scnr.nextLine().charAt(x);
+//				scnr.close();
+//				System.out.println(line[i][j]);
+//			}
+//		}
+//		
+//
+//	}
 }
