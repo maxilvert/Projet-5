@@ -52,7 +52,7 @@ class DAOMap extends DAOEntity<Map> {
 			call.execute();
 			final ResultSet resultSet = call.getResultSet();
 			if (resultSet.first()) {
-				Map = new Map(id, resultSet.getString("code"), resultSet.getString("message"));
+				Map = new Map(id, resultSet.getString("code"), resultSet.getString("Map"));
 			}
 			return Map;
 		} catch (final SQLException e) {
@@ -77,7 +77,7 @@ class DAOMap extends DAOEntity<Map> {
 			call.execute();
 			final ResultSet resultSet = call.getResultSet();
 			if (resultSet.first()) {
-				Map = new Map(resultSet.getInt("id"), code, resultSet.getString("message"));
+				Map = new Map(resultSet.getInt("id"), code, resultSet.getString("Map"));
 			}
 			return Map;
 		} catch (final SQLException e) {
