@@ -6,7 +6,7 @@ import java.io.IOException;
 public class Boulder extends Motion {
 	
 		
-	}
+	
 	public static void setX(int x) {
 		MotionLess.x = x;
 	}
