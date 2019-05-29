@@ -7,7 +7,7 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 
 public class MotionLess implements IMotionLess {
-	static Image sprite;
+	protected Image sprite;
 	static boolean imageloaded;
 	static int x;
 	static int y;
@@ -17,7 +17,7 @@ public class MotionLess implements IMotionLess {
 		// TODO Auto-generated constructor stub
 		sprite = ImageIO.read(new File("src/Image/"+type+".png"));
 	}
-	public static Image getSprite() {
+	public Image getSprite() {
 		return sprite;
 	}
 	public static void setSprite(Image sprite) {
