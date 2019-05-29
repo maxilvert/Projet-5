@@ -9,13 +9,13 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 import contract.IController;
-import contract.IModel;
+import contract.ILevel;
 
 
 class ViewFrame extends JFrame implements KeyListener {
 
 	
-	private IModel model;
+	private ILevel model;
 
 	
 	private IController controller;
@@ -23,24 +23,24 @@ class ViewFrame extends JFrame implements KeyListener {
 	private static final long	serialVersionUID	= -697358409737458175L;
 
 	
-	public ViewFrame(final IModel model) throws HeadlessException {
+	public ViewFrame(final ILevel model) throws HeadlessException {
 		this.buildViewFrame(model);
 	}
 
 	
-	public ViewFrame(final IModel model, final GraphicsConfiguration gc) {
+	public ViewFrame(final ILevel model, final GraphicsConfiguration gc) {
 		super(gc);
 		this.buildViewFrame(model);
 	}
 
 	
-	public ViewFrame(final IModel model, final String title) throws HeadlessException {
+	public ViewFrame(final ILevel model, final String title) throws HeadlessException {
 		super(title);
 		this.buildViewFrame(model);
 	}
 
 	
-	public ViewFrame(final IModel model, final String title, final GraphicsConfiguration gc) {
+	public ViewFrame(final ILevel model, final String title, final GraphicsConfiguration gc) {
 		super(title, gc);
 		this.buildViewFrame(model);
 	}
@@ -56,16 +56,16 @@ class ViewFrame extends JFrame implements KeyListener {
 	}
 
 	
-	protected IModel getModel() {
+	protected ILevel getModel() {
 		return this.model;
 	}
 
-	private void setModel(final IModel model) {
+	private void setModel(final ILevel model) {
 		this.model = model;
 	}
 
 	
-	private void buildViewFrame(final IModel model) {
+	private void buildViewFrame(final ILevel model) {
 		this.setModel(model);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(false);

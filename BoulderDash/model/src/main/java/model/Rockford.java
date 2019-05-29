@@ -52,8 +52,4 @@ public class Rockford extends Motion {
 		MotionLess.sprite = sprite;
 	} }
 	
-//>>>>>>> parent of 7dca09e... Modification du modèle
-//}
-//=======
-//}
-//>>>>>>> branch 'master' of https://github.com/maxilvert/Projet-5.git
+

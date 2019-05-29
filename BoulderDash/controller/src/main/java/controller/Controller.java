@@ -2,16 +2,16 @@ package controller;
 
 import contract.ControllerOrder;
 import contract.IController;
-import contract.IModel;
+import contract.ILevel;
 import contract.IView;
 
 public final class Controller implements IController {
 
 	private IView view;
 
-	private IModel model;
+	private ILevel model;
 
-	public Controller(final IView view, final IModel model) {
+	public Controller(final IView view, final ILevel model) {
 		this.setView(view);
 		this.setModel(model);
 	}
@@ -25,7 +25,7 @@ public final class Controller implements IController {
 		this.view = pview;
 	}
 
-	private void setModel(final IModel model) {
+	private void setModel(final ILevel model) {
 		this.model = model;
 	}
 

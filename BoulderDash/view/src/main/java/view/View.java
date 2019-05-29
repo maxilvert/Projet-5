@@ -5,7 +5,7 @@ import javax.swing.SwingUtilities;
 
 import contract.ControllerOrder;
 import contract.IController;
-import contract.IModel;
+import contract.ILevel;
 import contract.IView;
 
 
@@ -15,7 +15,7 @@ public final class View implements IView, Runnable {
 	private final ViewFrame viewFrame;
 
 	
-	public View(final IModel model) {
+	public View(final ILevel model) {
 		this.viewFrame = new ViewFrame(model);
 		SwingUtilities.invokeLater(this);
 	}
