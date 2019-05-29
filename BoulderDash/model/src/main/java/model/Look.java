@@ -2,5 +2,8 @@ package model;
 
 public enum Look {
 LEFT,
-RIGHT;
+RIGHT,
+UP,
+DOWN,
+DEFAULT;
 }
