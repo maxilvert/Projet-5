@@ -8,15 +8,18 @@ import javax.imageio.ImageIO;
 
 public class Rockford extends Motion {
 	private Image left;
-	private Image Right;
-	private Image Up;
-	private Image Down;
+	private Image right;
+	private Image up;
+	private Image down;
 	private Look look = Look.DEFAULT;
 
 	public Rockford() {
 		super("RockFord");
 		try {
 			left = ImageIO.read(new File("src/Image/RockFordLeft.png"));
+			right= ImageIO.read(new File("src/Image/RockFordRight.png"));
+			up=	ImageIO.read(new File("src/Image/RockFordUp.png"));
+			down=	ImageIO.read(new File("src/Image/RockFordUp.png"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
