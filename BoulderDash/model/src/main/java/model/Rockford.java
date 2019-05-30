@@ -17,9 +17,9 @@ public class Rockford extends Motion {
 		super("RockFord");
 		try {
 			left = ImageIO.read(new File("src/Image/RockFordLeft.png"));
-			right= ImageIO.read(new File("src/Image/RockFordRight.png"));
-			up=	ImageIO.read(new File("src/Image/RockFordUp.png"));
-			down=	ImageIO.read(new File("src/Image/RockFordUp.png"));
+			right = ImageIO.read(new File("src/Image/RockFordRight.png"));
+			up =	ImageIO.read(new File("src/Image/RockFordUp.png"));
+			down =	ImageIO.read(new File("src/Image/RockFordDown.png"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -31,7 +31,16 @@ public class Rockford extends Motion {
 		switch (look) {
 		case LEFT:
 			return left;
-
+			
+		case RIGHT:
+			return right;
+			
+		case UP:
+			return up;
+			
+		case DOWN:
+			return down;
+			
 		default:
 			break;
 		}
